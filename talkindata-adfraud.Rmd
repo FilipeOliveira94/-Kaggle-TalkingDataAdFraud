@@ -88,7 +88,7 @@ remove(df_false)
 remove(df_orig)
 ```
 
-Dataset de treino transformado final que será utilizado
+### Dataset de treino transformado final que será utilizado
 
 ```{r}
 df_inicial <- read_csv("trainTransf.csv", col_types = colTypes)
@@ -148,11 +148,11 @@ ggplot(gather(only_numeric[1:5]), aes(x=value)) +
   facet_wrap(~key, scales = 'free_x')
 ```
 
-## Pairplot (apenas primeiras 1000 linhas)
+## Pairplot (apenas primeiras 15000 linhas)
 
 ```{r, message = F, warning= F}
-ggpairs(only_numeric[0:1000,1:5], mapping = aes(alpha = 0.02, pch = '.')) +
-  ggtitle("Pairplot das variáveis numéricas (apenas 1000 linhas)") +
+ggpairs(only_numeric[0:15000,1:5], mapping = aes(alpha = 0.02, pch = '.')) +
+  ggtitle("Pairplot das variáveis numéricas (apenas 15000 linhas)") +
   theme_minimal()
 ```
 
@@ -239,7 +239,7 @@ confusionMatrix(table(data = predicoes_nb,
 auc_nb <- round(roc.curve(testData$is_attributed, predicoes_nb, plotit = F)$auc, 3)
 ```
 
-## Modelo #3 (Random Forest com pacote ranger)
+## Modelo #3 (Random Forest)
 
 ```{r, message = F, warning= F, results='hide'}
 modelo_rf <- ranger(is_attributed ~ .,
