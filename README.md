@@ -7,3 +7,5 @@ Link da competição: https://www.kaggle.com/c/talkingdata-adtracking-fraud-dete
 
 Os datasets utilizados podem ser obtidos na competição acima. 
 O dataset final utilizado foi um subset do dataset de treino oficial, obtido conforme a parte comentada do script R.
+
+Relatório completo do projeto: https://filipeoliveira94.github.io/-Kaggle-TalkingData_AdFraud/
